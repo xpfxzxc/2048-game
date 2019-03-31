@@ -1,0 +1,96 @@
+.tile {
+    position: absolute;
+    z-index: 2;
+    width: 106.25px;
+    height: 106.25px;
+    border-radius: 5px;
+    font-size: 56px;
+    font-weight: bolder;
+    line-height: 2em;
+    color: #f9f6f2;
+    text-align: center;
+    user-select: none;
+}
+
+.tile-0 {}
+.tile-2 {
+    color: #776e65;
+    background-color: #eee4da;
+}
+.tile-4 {
+    color: #776e65;
+    background-color: #ede0c8;
+}
+.tile-8 {
+    background-color: #f2b179;
+}
+.tile-16 {
+    background-color: #f59563;
+}
+.tile-32 {
+    background-color: #f67c5f;
+}
+.tile-64 {
+    background-color: #f65e3b;
+}
+.tile-128 {
+    font-size: 48px;
+    line-height: 2.35em;
+    background-color: #edcf72;
+    box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.2381), inset 0 0 0 1px rgba(255, 255, 255, 0.14286);
+}
+.tile-256 {
+    font-size: 48px;
+    line-height: 2.35em;
+    background-color: #edcc61;
+    box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.31746), inset 0 0 0 1px rgba(255, 255, 255, 0.19048);
+}
+.tile-512 {
+    font-size: 48px;
+    line-height: 2.35em;
+    background-color: #edc850;
+    box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.39683), inset 0 0 0 1px rgba(255, 255, 255, 0.2381);
+}
+.tile-1024 {
+    font-size: 42px;
+    line-height: 2.5em;
+    background-color: #edc53f;
+    box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.47619), inset 0 0 0 1px rgba(255, 255, 255, 0.28571);
+}
+.tile-2048 {
+    font-size: 42px;
+    line-height: 2.5em;
+    background-color: #edc22e;
+    box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.55536), inset 0 0 0 1px rgba(255, 255, 255, 0.33333);
+}
+
+@media screen and (max-width: 500px) {
+    .tile {
+        width: 63.75px;
+        height: 63.75px;
+        border-radius: 3px;
+        font-size: 33.6px;
+        line-height: 1.9em;
+    }
+
+    .tile-128 {
+        font-size: 28.8px;
+        line-height: 2.2em;
+    }
+    .tile-256 {
+        font-size: 28.8px;
+        line-height: 2.2em;
+    }
+    .tile-512 {
+        font-size: 28.8px;
+        line-height: 2.2em;
+    }
+    .tile-1024 {
+        font-size: 25.2px;
+        line-height: 2.4em;
+    }
+    .tile-2048 {
+        font-size: 25.2px;
+        line-height: 2.4em;
+    }
+}

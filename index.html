@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>2048 Game</title>
+    <link rel="stylesheet" type="text/css" href="css/initial.css">
+    <link rel="stylesheet" type="text/css" href="css/tile.css">
+    <link rel="stylesheet" type="text/css" href="css/animation.css">
+</head>
+<body>
+    <div id="main">
+        <div id="heading">
+            <h1 id="title"><a href="#">2048</a></h1>
+            <div id="scores-container">
+                <div id="score-container">0</div>
+                <div id="best-score-container">0</div>
+            </div>
+        </div>
+
+        <div id="game-info">
+            <div id="restart-btn">New Game</div>
+            <div id="subtitle">
+                <h2>Play 2048 Game Online</h2>
+                <p>Join the numbers and get to the <strong>2048 tile!</strong></p>
+            </div>
+        </div>
+
+        <div id="game-container" tabindex="1">
+            <div id="game-message">
+                <p id="message"></p>
+                <div id="retry-btn">Try again</div>
+                <div id="keep-playing-btn">Keep playing</div>
+            </div>
+
+            <div id="grid-container">
+                <div class="grid-row">
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                </div>
+                <div class="grid-row">
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                </div>
+                <div class="grid-row">
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                </div>
+                <div class="grid-row">
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                </div>
+            </div>
+
+            <div id="tile-container">
+            </div>
+        </div>
+    </div>
+    
+    <script src="js/hammer.min.js"></script>
+    <script src="js/utility.js"></script>
+    <script src="js/localStorageManager.js"></script>
+    <script src="js/board.js"></script>
+    <script src="js/boardView.js"></script>
+    <script src="js/scoreView.js"></script>
+    <script src="js/gameMessageView.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
