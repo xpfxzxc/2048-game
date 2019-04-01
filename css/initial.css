@@ -221,7 +221,7 @@ body {
     }
     #scores-container div:before {
         display: block;
-        font-size: 6px;
+        font-size: 9px;
     }
     #best-score-container {
         width: 67.2px;
