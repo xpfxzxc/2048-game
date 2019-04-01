@@ -21,17 +21,20 @@ addLoadEvent(function() {
         },
 
         showTileMovement(tilePaths) {
+            let oldTiles = [];
             tilePaths.forEach(path => {
                 let from = path.from;
-                let to = path.to;
                 let number = path.number;
                 let oldTile = document.createElement('div');
                 oldTile.textContent = number;
                 oldTile.classList.add('tile', 'tile-' + number, fromPrefix + from[0] + '-' + from[1]);
                 tileContainer.appendChild(oldTile);
-                setTimeout(() => {
-                    oldTile.classList.add(toPrefix + to[0] + '-' + to[1]);
-                });
+                oldTiles.push(oldTile);
+            });
+            tileContainer.getClientRects(); // force repaint of an element
+            tilePaths.forEach((path, i) => {
+                let to = path.to;
+                oldTiles[i].classList.add(toPrefix + to[0] + '-' + to[1]);
             });
         },
 
