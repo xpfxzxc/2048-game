@@ -43,7 +43,7 @@
     left: 12px;
     color: #8f7a66;
     opacity: 1;
-    animation: move-up 600ms ease forwards;
+    animation: move-up 800ms ease forwards;
 }
 
 .tile.tile-from-position-0-0 {
