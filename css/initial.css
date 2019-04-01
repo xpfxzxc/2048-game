@@ -111,6 +111,7 @@ body {
 /* Board */
 #game-container {
     position: relative;
+    height: 500px;
     outline: none;
 }
 
@@ -255,6 +256,10 @@ body {
     }
 
     /* Board */
+    #game-container {
+        height: 300px;
+    }
+    
     #game-message {
         width: 300px;
         height: 300px;
