@@ -35,25 +35,34 @@ function keydownHandler(event) {
     let directionCode = event.key || 's' + event.direction;
     switch (directionCode.toLowerCase()) {
     case 'w':
+    case 'arrowup':
     case 's' + Hammer.DIRECTION_UP:
         board.slideUp();
         break;
     case 'd':
+    case 'arrowright':
     case 's' + Hammer.DIRECTION_RIGHT:
         board.slideRight();
         break;
     case 's':
+    case 'arrowdown':
     case 's' + Hammer.DIRECTION_DOWN:
         board.slideDown();
         break;
     case 'a':
+    case 'arrowleft':
     case 's' + Hammer.DIRECTION_LEFT:
         board.slideLeft();
         break;
     }
 
-    if (! ['w', 'd', 's', 'a', 's2', 's4', 's8', 's16'].includes(directionCode) || ! board.isPushable()) {
+    if (! ['w', 'd', 's', 'a', 's2', 's4', 's8', 's16','ArrowUp', 'ArrowRight', 'ArrowDown', 'ArrowLeft'].includes(directionCode)
+     || ! board.isPushable()) {
         return;
+    }
+
+    if (directionCode.startsWith('Arrow')) {
+        event.preventDefault();
     }
 
     board.randomAppearTiles();
