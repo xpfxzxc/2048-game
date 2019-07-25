@@ -108,4 +108,12 @@ addLoadEvent(function() {
     
     gameContainer.addEventListener('keydown', keydownHandler, false);
     document.addEventListener('click', clickHandler, false);
+
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/2048-game/sw.js', { scope: '/2048-game/' }).then(reg => {
+            console.log('Registration succeeded. Scope is', reg.scope);
+        }).catch(error => {
+            console.log('Registration failed with', error);
+        })
+    }
 });
